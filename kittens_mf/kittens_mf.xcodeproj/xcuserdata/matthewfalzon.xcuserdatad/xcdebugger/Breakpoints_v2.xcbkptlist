@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kittens_mf/OtherViewController.swift"
+            timestampString = "454505052.865934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "OtherViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kittens_mf.OtherViewController.label.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "kittens_mf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewfalzon/Documents/General%20Assembly/Git/Week-7/kittens_mf/kittens_mf/OtherViewController.swift"
+                  timestampString = "454505125.060587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kittens_mf.OtherViewController.label.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "kittens_mf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewfalzon/Documents/General%20Assembly/Git/Week-7/kittens_mf/kittens_mf/OtherViewController.swift"
+                  timestampString = "454505125.060853"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kittens_mf.OtherViewController.init (kittens_mf.OtherViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; kittens_mf.OtherViewController"
+                  moduleName = "kittens_mf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewfalzon/Documents/General%20Assembly/Git/Week-7/kittens_mf/kittens_mf/OtherViewController.swift"
+                  timestampString = "454505125.060946"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kittens_mf.OtherViewController.init (kittens_mf.OtherViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; kittens_mf.OtherViewController"
+                  moduleName = "kittens_mf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewfalzon/Documents/General%20Assembly/Git/Week-7/kittens_mf/kittens_mf/OtherViewController.swift"
+                  timestampString = "454505125.06104"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "90">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
