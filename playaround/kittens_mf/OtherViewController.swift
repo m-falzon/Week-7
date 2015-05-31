@@ -1,5 +1,5 @@
 //
-//  ViewController2.swift
+//  OtherViewController.swift
 //  kittens_mf
 //
 //  Created by Matthew Falzon on 28/05/2015.
@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class OtherViewController: UIViewController {
+
+    @IBAction func unwindToOtherScreen (segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
     
     var someText = ""
     
@@ -19,4 +23,5 @@ class ViewController2: UIViewController {
         label.text = someText
         
     }
+
 }

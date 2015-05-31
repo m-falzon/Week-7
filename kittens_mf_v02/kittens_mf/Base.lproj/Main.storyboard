@@ -7,45 +7,40 @@
         <!--Screen One-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <viewController title="Screen One" id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController title="Screen One" id="vXZ-lx-hvc" customClass="ViewController" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" horizontalHuggingPriority="256" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-fy-96F">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="P3D-Lb-MX7" kind="show" identifier="segueToScreen" id="n4W-AZ-jkc"/>
-                                </connections>
-                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lfv-JR-rAk">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="pLM-fy-96F" secondAttribute="centerY" id="8bm-Nj-vqE"/>
-                            <constraint firstAttribute="centerX" secondItem="pLM-fy-96F" secondAttribute="centerX" id="nVV-ji-wL2"/>
+                            <constraint firstAttribute="centerY" secondItem="lfv-JR-rAk" secondAttribute="centerY" id="R9X-th-V8O"/>
+                            <constraint firstAttribute="centerX" secondItem="lfv-JR-rAk" secondAttribute="centerX" id="sPK-QP-fZW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kittens!" id="gh1-R6-iPG"/>
                     <connections>
                         <outlet property="button1Tapped" destination="3dK-MH-vYq" id="e7A-WL-yRP"/>
                         <outlet property="button2Tapped" destination="rYv-UW-h8O" id="Jq1-OI-mZw"/>
+                        <segue destination="P3D-Lb-MX7" kind="show" identifier="segueToScreen" id="nN1-lf-8nS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1250" y="389"/>
         </scene>
         <!--Screen Two-->
         <scene sceneID="Esf-PO-cBG">
             <objects>
-                <viewController title="Screen Two" id="P3D-Lb-MX7" customClass="ViewController" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Screen Two" id="P3D-Lb-MX7" customClass="ViewController2" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QAj-cA-GMd"/>
                         <viewControllerLayoutGuide type="bottom" id="AiS-1M-c0Z"/>
@@ -54,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-MH-vYq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-MH-vYq">
                                 <rect key="frame" x="277" y="254" width="59" height="30"/>
                                 <state key="normal" title="Button 1">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,9 +57,10 @@
                                 </state>
                                 <connections>
                                     <action selector="button1Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cf7-X9-gQ6"/>
+                                    <action selector="button1Tapped:" destination="P3D-Lb-MX7" eventType="touchUpInside" id="iMV-cP-JLC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYv-UW-h8O">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYv-UW-h8O">
                                 <rect key="frame" x="277" y="316" width="59" height="30"/>
                                 <state key="normal" title="Button 2">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,15 +68,22 @@
                                 </state>
                                 <connections>
                                     <action selector="button2Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8zE-5J-MiK"/>
+                                    <action selector="button2Tapped:" destination="P3D-Lb-MX7" eventType="touchUpInside" id="txP-Im-xnP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3dK-MH-vYq" secondAttribute="centerX" constant="-6.5" id="2RV-jA-eyy"/>
+                            <constraint firstAttribute="centerY" secondItem="3dK-MH-vYq" secondAttribute="centerY" constant="31" id="3Zg-QB-0HF"/>
+                            <constraint firstAttribute="centerX" secondItem="rYv-UW-h8O" secondAttribute="centerX" constant="-6.5" id="EJP-Vl-WQa"/>
+                            <constraint firstItem="rYv-UW-h8O" firstAttribute="top" secondItem="3dK-MH-vYq" secondAttribute="bottom" constant="32" id="jwg-cJ-FgQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Screen Two" id="Emu-Rg-Nc2"/>
                     <connections>
                         <outlet property="label" destination="hcg-wk-Q3P" id="LOe-gb-yq0"/>
-                        <segue destination="5hv-rn-lmj" kind="show" identifier="segueToScreen" id="E8N-b1-R5j"/>
+                        <segue destination="5hv-rn-lmj" kind="show" identifier="segueToScreen2" id="E8N-b1-R5j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhU-Np-KgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXS-ki-RbL">
-                                <rect key="frame" x="254" y="285" width="92" height="30"/>
+                                <rect key="frame" x="254" y="283" width="92" height="34"/>
                                 <state key="normal" title="Model popup">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,17 +112,20 @@
                                     <segue destination="ybA-7Z-yan" kind="presentation" id="AV1-QB-1O2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcg-wk-Q3P">
-                                <rect key="frame" x="279" y="345" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcg-wk-Q3P">
+                                <rect key="frame" x="281" y="347" width="38" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="xXS-ki-RbL" secondAttribute="centerX" id="Brs-XV-PdT"/>
+                            <constraint firstItem="hcg-wk-Q3P" firstAttribute="top" secondItem="xXS-ki-RbL" secondAttribute="bottom" constant="30" id="Nud-Pw-dax"/>
+                            <constraint firstAttribute="centerY" secondItem="hcg-wk-Q3P" secondAttribute="centerY" constant="-55.5" id="ucp-3X-7Qb"/>
                             <constraint firstAttribute="centerY" secondItem="xXS-ki-RbL" secondAttribute="centerY" id="v6z-rj-hqD"/>
+                            <constraint firstAttribute="centerX" secondItem="hcg-wk-Q3P" secondAttribute="centerX" id="y5D-as-TzG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Screen Three" id="bce-iv-1hn">

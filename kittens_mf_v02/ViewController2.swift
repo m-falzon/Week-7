@@ -8,38 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController2: UIViewController {
     
     var textToOtherViewController = ""
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "timeToMoveOn", userInfo: nil, repeats: false)
-    }
     
-    func timeToMoveOn() {
-        self.performSegueWithIdentifier("segueToScreen", sender: self)
-    }
+    // Unwind segue
     
     @IBAction func unwindToPreviousViewController (segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
     
+    // Button segues
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let otherViewController = segue.destinationViewController as! OtherViewController
         otherViewController.someText = textToOtherViewController
     }
-
+    
     @IBAction func button1Tapped(sender: AnyObject) {
         textToOtherViewController = "Hello from Button 1"
         performSegueWithIdentifier("segueToScreen2", sender: self)
     }
-
+    
     @IBAction func button2Tapped(sender: AnyObject) {
         textToOtherViewController = "Hello from Button 2"
         performSegueWithIdentifier("segueToScreen2", sender: self)
     }
 }
-
