@@ -12,10 +12,10 @@
 		CE0F7C3E1B170D3D009765B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0F7C3D1B170D3D009765B3 /* Images.xcassets */; };
 		CE0F7C411B170D3D009765B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0F7C3F1B170D3D009765B3 /* LaunchScreen.xib */; };
 		CE0F7C4D1B170D3D009765B3 /* kittens_mfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F7C4C1B170D3D009765B3 /* kittens_mfTests.swift */; };
-		CE0F7C571B171106009765B3 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F7C561B171106009765B3 /* OtherViewController.swift */; };
 		CE0F7C5B1B171F1A009765B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F7C5A1B171F1A009765B3 /* Constants.swift */; };
 		CE0F7C601B1723E3009765B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0F7C5E1B1723E3009765B3 /* Main.storyboard */; };
-		CE0F7C621B1724AE009765B3 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F7C611B1724AE009765B3 /* ViewController2.swift */; };
+		CE6FCDE81B1AE7AA00BF4FDB /* KittenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDE71B1AE7AA00BF4FDB /* KittenFilter.swift */; };
+		CE6FCDEA1B1AE7B400BF4FDB /* KittenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDE91B1AE7B400BF4FDB /* KittenList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,10 @@
 		CE0F7C461B170D3D009765B3 /* kittens_mfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kittens_mfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0F7C4B1B170D3D009765B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0F7C4C1B170D3D009765B3 /* kittens_mfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kittens_mfTests.swift; sourceTree = "<group>"; };
-		CE0F7C561B171106009765B3 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		CE0F7C5A1B171F1A009765B3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE0F7C5F1B1723E3009765B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE0F7C611B1724AE009765B3 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController2.swift; path = ../ViewController2.swift; sourceTree = "<group>"; };
+		CE6FCDE71B1AE7AA00BF4FDB /* KittenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KittenFilter.swift; sourceTree = "<group>"; };
+		CE6FCDE91B1AE7B400BF4FDB /* KittenList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KittenList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				CE0F7C381B170D3D009765B3 /* ViewController.swift */,
-				CE0F7C561B171106009765B3 /* OtherViewController.swift */,
-				CE0F7C611B1724AE009765B3 /* ViewController2.swift */,
+				CE6FCDE91B1AE7B400BF4FDB /* KittenList.swift */,
+				CE6FCDE71B1AE7AA00BF4FDB /* KittenFilter.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -237,10 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0F7C621B1724AE009765B3 /* ViewController2.swift in Sources */,
 				CE0F7C391B170D3D009765B3 /* ViewController.swift in Sources */,
-				CE0F7C571B171106009765B3 /* OtherViewController.swift in Sources */,
 				CE0F7C371B170D3D009765B3 /* AppDelegate.swift in Sources */,
+				CE6FCDEA1B1AE7B400BF4FDB /* KittenList.swift in Sources */,
+				CE6FCDE81B1AE7AA00BF4FDB /* KittenFilter.swift in Sources */,
 				CE0F7C5B1B171F1A009765B3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

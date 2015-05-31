@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Screen One-->
+        <!--Kittens-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Screen One" id="vXZ-lx-hvc" customClass="ViewController" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -26,10 +26,8 @@
                             <constraint firstAttribute="centerX" secondItem="lfv-JR-rAk" secondAttribute="centerX" id="sPK-QP-fZW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kittens!" id="gh1-R6-iPG"/>
+                    <navigationItem key="navigationItem" title="Kittens" id="gh1-R6-iPG"/>
                     <connections>
-                        <outlet property="button1Tapped" destination="3dK-MH-vYq" id="e7A-WL-yRP"/>
-                        <outlet property="button2Tapped" destination="rYv-UW-h8O" id="Jq1-OI-mZw"/>
                         <segue destination="P3D-Lb-MX7" kind="show" identifier="segueToScreen" id="nN1-lf-8nS"/>
                     </connections>
                 </viewController>
@@ -37,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="1250" y="389"/>
         </scene>
-        <!--Screen Two-->
+        <!--Kittens Home-->
         <scene sceneID="Esf-PO-cBG">
             <objects>
-                <viewController title="Screen Two" id="P3D-Lb-MX7" customClass="ViewController2" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P3D-Lb-MX7" customClass="KittenList" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QAj-cA-GMd"/>
                         <viewControllerLayoutGuide type="bottom" id="AiS-1M-c0Z"/>
@@ -49,51 +47,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dK-MH-vYq">
-                                <rect key="frame" x="277" y="254" width="59" height="30"/>
-                                <state key="normal" title="Button 1">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="button1Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cf7-X9-gQ6"/>
-                                    <action selector="button1Tapped:" destination="P3D-Lb-MX7" eventType="touchUpInside" id="iMV-cP-JLC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYv-UW-h8O">
-                                <rect key="frame" x="277" y="316" width="59" height="30"/>
-                                <state key="normal" title="Button 2">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="button2Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8zE-5J-MiK"/>
-                                    <action selector="button2Tapped:" destination="P3D-Lb-MX7" eventType="touchUpInside" id="txP-Im-xnP"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kittens-ragdoll" translatesAutoresizingMaskIntoConstraints="NO" id="cay-ND-m95">
+                                <rect key="frame" x="140" y="353" width="320" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="4Qm-hI-v85"/>
+                                    <constraint firstAttribute="height" constant="148" id="wkd-eK-hIF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ragdoll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRE-Ky-ysW">
+                                <rect key="frame" x="140" y="465" width="320" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="bpX-II-X2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kittens-fluffy" translatesAutoresizingMaskIntoConstraints="NO" id="LM2-Sl-nP6">
+                                <rect key="frame" x="140" y="170" width="320" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="If4-nh-tHv"/>
+                                    <constraint firstAttribute="height" constant="148" id="ajo-Ie-vNZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2s-eq-BAp">
+                                <rect key="frame" x="140" y="282" width="320" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Jcd-P8-8Kh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtering Kittens by: None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYg-8L-haC">
+                                <rect key="frame" x="141" y="94" width="318" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HxF-91-83G"/>
+                                    <constraint firstAttribute="width" constant="318" id="K6l-6W-rhN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="3dK-MH-vYq" secondAttribute="centerX" constant="-6.5" id="2RV-jA-eyy"/>
-                            <constraint firstAttribute="centerY" secondItem="3dK-MH-vYq" secondAttribute="centerY" constant="31" id="3Zg-QB-0HF"/>
-                            <constraint firstAttribute="centerX" secondItem="rYv-UW-h8O" secondAttribute="centerX" constant="-6.5" id="EJP-Vl-WQa"/>
-                            <constraint firstItem="rYv-UW-h8O" firstAttribute="top" secondItem="3dK-MH-vYq" secondAttribute="bottom" constant="32" id="jwg-cJ-FgQ"/>
+                            <constraint firstItem="dRE-Ky-ysW" firstAttribute="trailing" secondItem="cay-ND-m95" secondAttribute="trailing" id="46o-Wc-ip7"/>
+                            <constraint firstAttribute="centerX" secondItem="LM2-Sl-nP6" secondAttribute="centerX" id="7Pf-Zn-3iR"/>
+                            <constraint firstItem="X2s-eq-BAp" firstAttribute="trailing" secondItem="LM2-Sl-nP6" secondAttribute="trailing" id="GqG-dw-mO2"/>
+                            <constraint firstItem="X2s-eq-BAp" firstAttribute="bottom" secondItem="LM2-Sl-nP6" secondAttribute="bottom" id="Ixr-mD-LKL"/>
+                            <constraint firstItem="SYg-8L-haC" firstAttribute="top" secondItem="QAj-cA-GMd" secondAttribute="bottom" constant="30" id="Xnu-j1-EIG"/>
+                            <constraint firstAttribute="centerX" secondItem="SYg-8L-haC" secondAttribute="centerX" id="gSy-oL-9XX"/>
+                            <constraint firstItem="LM2-Sl-nP6" firstAttribute="top" secondItem="SYg-8L-haC" secondAttribute="bottom" constant="36" id="hXb-KB-8u9"/>
+                            <constraint firstItem="X2s-eq-BAp" firstAttribute="leading" secondItem="LM2-Sl-nP6" secondAttribute="leading" id="jrA-xv-1f3"/>
+                            <constraint firstItem="cay-ND-m95" firstAttribute="top" secondItem="LM2-Sl-nP6" secondAttribute="bottom" constant="35" id="lr8-6M-U2y"/>
+                            <constraint firstItem="LM2-Sl-nP6" firstAttribute="leading" secondItem="cay-ND-m95" secondAttribute="leading" id="nbc-6O-vwL"/>
+                            <constraint firstItem="dRE-Ky-ysW" firstAttribute="bottom" secondItem="cay-ND-m95" secondAttribute="bottom" id="ud0-rI-H62"/>
+                            <constraint firstItem="dRE-Ky-ysW" firstAttribute="leading" secondItem="cay-ND-m95" secondAttribute="leading" id="uum-la-PFl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Screen Two" id="Emu-Rg-Nc2"/>
+                    <navigationItem key="navigationItem" title="Kittens Home" id="Emu-Rg-Nc2">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="pLh-FU-4Sy">
+                            <connections>
+                                <segue destination="5hv-rn-lmj" kind="show" id="4EX-Te-quJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="label" destination="hcg-wk-Q3P" id="LOe-gb-yq0"/>
-                        <segue destination="5hv-rn-lmj" kind="show" identifier="segueToScreen2" id="E8N-b1-R5j"/>
+                        <outlet property="cuteTextLabel" destination="X2s-eq-BAp" id="oUz-NX-G3x"/>
+                        <outlet property="cuteView" destination="LM2-Sl-nP6" id="3rz-yx-Va7"/>
+                        <outlet property="filteringKittensTextLabel" destination="SYg-8L-haC" id="Kss-eP-bIZ"/>
+                        <outlet property="ragdollTextLabel" destination="dRE-Ky-ysW" id="SVh-w4-Ebj"/>
+                        <outlet property="ragdollView" destination="cay-ND-m95" id="dbJ-Nl-CnX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhU-Np-KgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1942" y="389"/>
         </scene>
-        <!--Screen Three-->
+        <!--Filter Kittens-->
         <scene sceneID="kD3-DW-jaA">
             <objects>
-                <viewController title="Screen Three" id="5hv-rn-lmj" customClass="OtherViewController" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5hv-rn-lmj" customClass="KittenFilter" customModule="kittens_mf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TaS-YO-1O2"/>
                         <viewControllerLayoutGuide type="bottom" id="u8K-3H-IJY"/>
@@ -102,99 +139,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXS-ki-RbL">
-                                <rect key="frame" x="254" y="283" width="92" height="34"/>
-                                <state key="normal" title="Model popup">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-4W-j1Q">
+                                <rect key="frame" x="274" y="260" width="53" height="30"/>
+                                <state key="normal" title="Ragdoll">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ybA-7Z-yan" kind="presentation" id="AV1-QB-1O2"/>
+                                    <segue destination="0rx-k1-b8N" kind="unwind" unwindAction="unwindToKittensListView:sender:" id="bZf-sO-Iuo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcg-wk-Q3P">
-                                <rect key="frame" x="281" y="347" width="38" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-pf-mzX">
+                                <rect key="frame" x="263" y="330" width="75" height="30"/>
+                                <state key="normal" title="Clear Filter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0rx-k1-b8N" kind="unwind" unwindAction="unwindToKittensListView:sender:" id="1E7-or-hgo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Choice: None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L0-ha-t1E">
+                                <rect key="frame" x="166" y="122" width="268" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="qCY-G1-hpJ"/>
+                                    <constraint firstAttribute="height" constant="21" id="v2e-he-6fa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v73-lG-yuh">
+                                <rect key="frame" x="284" y="190" width="33" height="30"/>
+                                <state key="normal" title="Cute">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0rx-k1-b8N" kind="unwind" unwindAction="unwindToKittensListView:sender:" id="Rwa-FK-Jfy"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="xXS-ki-RbL" secondAttribute="centerX" id="Brs-XV-PdT"/>
-                            <constraint firstItem="hcg-wk-Q3P" firstAttribute="top" secondItem="xXS-ki-RbL" secondAttribute="bottom" constant="30" id="Nud-Pw-dax"/>
-                            <constraint firstAttribute="centerY" secondItem="hcg-wk-Q3P" secondAttribute="centerY" constant="-55.5" id="ucp-3X-7Qb"/>
-                            <constraint firstAttribute="centerY" secondItem="xXS-ki-RbL" secondAttribute="centerY" id="v6z-rj-hqD"/>
-                            <constraint firstAttribute="centerX" secondItem="hcg-wk-Q3P" secondAttribute="centerX" id="y5D-as-TzG"/>
+                            <constraint firstItem="aCc-pf-mzX" firstAttribute="top" secondItem="BEV-4W-j1Q" secondAttribute="bottom" constant="40" id="2Pr-ZW-4eK"/>
+                            <constraint firstItem="BEV-4W-j1Q" firstAttribute="top" secondItem="v73-lG-yuh" secondAttribute="bottom" constant="40" id="Nlr-Z3-4NE"/>
+                            <constraint firstItem="v73-lG-yuh" firstAttribute="top" secondItem="1L0-ha-t1E" secondAttribute="bottom" constant="47" id="TgR-jq-tSF"/>
+                            <constraint firstAttribute="centerX" secondItem="v73-lG-yuh" secondAttribute="centerX" constant="-0.5" id="Yp5-zd-TWJ"/>
+                            <constraint firstAttribute="centerX" secondItem="aCc-pf-mzX" secondAttribute="centerX" constant="-0.5" id="Zfn-Nd-7Zh"/>
+                            <constraint firstAttribute="centerX" secondItem="BEV-4W-j1Q" secondAttribute="centerX" constant="-0.5" id="eK0-0R-KlN"/>
+                            <constraint firstAttribute="centerX" secondItem="1L0-ha-t1E" secondAttribute="centerX" constant="-0.5" id="fQy-jH-Te4"/>
+                            <constraint firstItem="1L0-ha-t1E" firstAttribute="top" secondItem="TaS-YO-1O2" secondAttribute="bottom" constant="58" id="nMR-H7-3yy"/>
+                            <constraint firstAttribute="centerX" secondItem="v73-lG-yuh" secondAttribute="centerX" constant="-0.5" id="rO6-Qo-KDT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Screen Three" id="bce-iv-1hn">
-                        <barButtonItem key="rightBarButtonItem" title="Go Home" id="7Az-ih-nOq">
-                            <connections>
-                                <segue destination="gbr-yM-KWf" kind="unwind" unwindAction="unwindToPreviousViewController:sender:" id="Kt9-r2-ckH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Filter Kittens" id="bce-iv-1hn"/>
                     <connections>
-                        <outlet property="label" destination="hcg-wk-Q3P" id="gUB-J3-8Cu"/>
+                        <outlet property="previousChoiceLabel" destination="1L0-ha-t1E" id="QbJ-WP-ot5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKA-9M-3Ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="gbr-yM-KWf" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="0rx-k1-b8N" userLabel="Exit" sceneMemberID="exit"/>
+                <navigationItem title="Title" id="Do3-ZI-gJh"/>
             </objects>
             <point key="canvasLocation" x="2645" y="389"/>
-        </scene>
-        <!--Model Popup-->
-        <scene sceneID="rlP-M7-Nie">
-            <objects>
-                <viewController title="Model Popup" id="ybA-7Z-yan" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hed-lb-DFk"/>
-                        <viewControllerLayoutGuide type="bottom" id="sEH-zU-Ld2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="joG-VP-7xR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyc-SE-XYh">
-                                <rect key="frame" x="235" y="285" width="131" height="30"/>
-                                <state key="normal" title="Done, and go back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2BI-U3-Kj4" kind="unwind" unwindAction="unwindToOtherScreen:sender:" id="lDC-Yu-vi8"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaA-G3-mQr">
-                                <rect key="frame" x="-9" y="-5" width="609" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Oe2-HV-YGH"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Model Popup" id="O0j-ig-zMD">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="O8o-pZ-F4t">
-                                            <connections>
-                                                <segue destination="2BI-U3-Kj4" kind="unwind" unwindAction="unwindToOtherScreen:sender:" id="df9-CC-ywt"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Yyc-SE-XYh" secondAttribute="centerX" constant="-0.5" id="5zN-zP-DsX"/>
-                            <constraint firstAttribute="centerY" secondItem="Yyc-SE-XYh" secondAttribute="centerY" id="7yj-S9-zim"/>
-                            <constraint firstItem="YaA-G3-mQr" firstAttribute="leading" secondItem="joG-VP-7xR" secondAttribute="leading" constant="-9" id="ID7-QC-vWG"/>
-                            <constraint firstAttribute="trailing" secondItem="YaA-G3-mQr" secondAttribute="trailing" id="IX5-cR-g4Q"/>
-                            <constraint firstItem="YaA-G3-mQr" firstAttribute="top" secondItem="joG-VP-7xR" secondAttribute="top" constant="-5" id="KoH-u8-w6b"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5nu-GB-aH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="2BI-U3-Kj4" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2645" y="1110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="odE-Jm-lIO">
@@ -215,4 +220,8 @@
             <point key="canvasLocation" x="561" y="389"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kittens-fluffy" width="207" height="93"/>
+        <image name="kittens-ragdoll" width="207" height="93"/>
+    </resources>
 </document>
