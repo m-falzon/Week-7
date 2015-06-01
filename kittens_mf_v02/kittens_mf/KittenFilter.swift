@@ -1,31 +1,32 @@
 //
-//  OtherViewController.swift
-//  kittens_mf
+//  KittensFilterViewController.swift
+//  Kittens
 //
-//  Created by Matthew Falzon on 28/05/2015.
-//  Copyright (c) 2015 Matthew Falzon. All rights reserved.
+//  Created by Ryan Blunden on 28/05/2015.
+//  Copyright (c) 2015 RabbitBird Pty Ltd. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
+// Use types instead of passing around strings. SAFE!
 enum KittenType:String {
     case Cute = "Cute"
     case Ragdoll = "Ragdoll"
 }
 
-class KittenFilter: UIViewController {
+class KittenFilter:UIViewController {
     var kittenType:KittenType? = nil
     
-    @IBOutlet weak var previousChoiceLabel: UILabel!
-    let previousChoiceLabelPrefix = "Previous Choice:"
+    @IBOutlet weak var previousChoiceTextLabel: UILabel!
+    let previousChoiceTextPrefix = "Previous Choice:"
     var previousChoiceText = ""
     
     override func viewDidLoad() {
-        previousChoiceLabel.text = "\(previousChoiceLabelPrefix) \(previousChoiceText)"
+        previousChoiceTextLabel.text = "\(previousChoiceTextPrefix) \(previousChoiceText)"
     }
     
-    func perpareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let segueIdentifier = segue.identifier {
             switch segueIdentifier {
             case "cuteButton":
@@ -34,7 +35,7 @@ class KittenFilter: UIViewController {
             case "ragdollButton":
                 kittenType = KittenType.Ragdoll
                 
-            case "clearFitlerButton":
+            case "clearFilterButton":
                 kittenType = nil
                 
             default:
@@ -43,5 +44,3 @@ class KittenFilter: UIViewController {
         }
     }
 }
-
-

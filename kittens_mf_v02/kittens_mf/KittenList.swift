@@ -37,7 +37,7 @@ class KittenList: UIViewController {
     }
     
     @IBAction func unwindToKittensListView(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let kittensFilter = segue.destinationViewController as? KittenFilter {
+        if let kittensFilter = segue.sourceViewController as? KittenFilter {
             if let kittenType = kittensFilter.kittenType {
                 kittenFilterType = kittenType
                 filterKittenText = kittenType.rawValue
